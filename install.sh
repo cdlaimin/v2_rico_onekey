@@ -194,7 +194,7 @@ pre_install_caddy(){
     # Set caddy v2ray tls email
     echo "前端获取TLS证书时登记的邮箱"
     read -p "直接回车默认即可(admin@admin.com):" v2ray_email
-    [ -z "${v2ray_email}" ] && v2ray_email="588led@gmail.com"
+    [ -z "${v2ray_email}" ] && v2ray_email="admin@admin.com"
     echo
     echo "---------------------------"
     echo "证书邮箱 = ${v2ray_email}"
