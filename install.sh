@@ -232,7 +232,7 @@ config_docker(){
     echo "开始安装软件包"
     install_dependencies
     echo "等待加载DOCKER配置文件"
-    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/master/tcp_docker/docker-compose.yml > docker-compose.yml
+    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/main/tcp_docker/docker-compose.yml > docker-compose.yml
     sed -i "s|node_id:.*|node_id: ${ssrpanel_node_id}|"  ./docker-compose.yml
     sed -i "s|sspanel_url:.*|sspanel_url: '${ssrpanel_url}'|"  ./docker-compose.yml
     sed -i "s|key:.*|key: '${ssrpanel_key}'|"  ./docker-compose.yml
@@ -251,7 +251,7 @@ config_caddy_docker(){
     install_dependencies
     curl -L https://raw.githubusercontent.com/hulisang/v2ray-sspanel-v3-mod_Uim-plugin/master/Docker/Caddy_V2ray/Caddyfile >  Caddyfile
     echo "等待加载DOCKER配置文件"
-    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/master/caddy_docker/docker-compose.yml > docker-compose.yml
+    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/main/caddy_docker/docker-compose.yml > docker-compose.yml
     sed -i "s|node_id:.*|node_id: ${ssrpanel_node_id}|"  ./docker-compose.yml
     sed -i "s|sspanel_url:.*|sspanel_url: '${ssrpanel_url}'|"  ./docker-compose.yml
     sed -i "s|key:.*|key: '${ssrpanel_key}'|"  ./docker-compose.yml
@@ -297,7 +297,7 @@ config_caddy_docker_cloudflare(){
     echo "开始加载CADDY和DOCKER的配置文件"
     curl -L https://raw.githubusercontent.com/hulisang/v2ray-sspanel-v3-mod_Uim-plugin/master/Docker/Caddy_V2ray/Caddyfile >Caddyfile
     epcho "加载DOCKER的配置文件中"
-    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/master/caddy_docker/docker-compose.yml >docker-compose.yml
+    curl -L https://raw.githubusercontent.com/john8911/v2_rico_onekey/main/caddy_docker/docker-compose.yml >docker-compose.yml
     sed -i "s|node_id:.*|node_id: ${ssrpanel_node_id}|"  ./docker-compose.yml
     sed -i "s|sspanel_url:.*|sspanel_url: '${ssrpanel_url}'|"  ./docker-compose.yml
     sed -i "s|key:.*|key: '${ssrpanel_key}'|"  ./docker-compose.yml
