@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  redirect:
+    image: ginuerzh/gost
+    restart: always
+    network_mode: "host"
+    command:
+      - "-L=tcp://:NAT鸡端口/国外服务器IP:443"
+      - "-L=udp://:NAT鸡端口/国外服务器IP:443"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
