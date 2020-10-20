@@ -1,6 +1,23 @@
 # v2_rico_onekey
 sspanel-v3-后端一键v2ray对接
+```
+推荐debian 10系统
+开启BBR
+//修改系统变量
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 
+//保存生效
+sysctl -p
+
+//查看内核是否已开启BBR
+sysctl net.ipv4.tcp_available_congestion_control
+显示以下即已开启：net.ipv4.tcp_available_congestion_control = bbr cubic reno
+
+//查看BBR是否启动
+lsmod | grep bbr
+显示以下即启动成功：tcp_bbr                20480  14
+```
 ## Install
 ```
 //关闭防火墙
