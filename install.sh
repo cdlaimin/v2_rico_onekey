@@ -483,8 +483,8 @@ install_dependencies(){
 clear
 while true
 do
-echo -e "\033[42;30m RICO破解版脚本 By：章鱼哥 \033[0m"
-echo -e "\033[42;30m 如需商用请购买正版 章鱼哥TG:@WocaonimaB \033[0m"
+echo -e "\033[42;30m RICO后端一键 \033[0m"
+echo -e "\033[42;30m 章鱼哥TG:@WocaonimaB \033[0m"
 echo  ""
 echo  "请输入数字选择你要进行的操作："
 for ((i=1;i<=${#operation[@]};i++ )); do
@@ -502,7 +502,7 @@ case "${selected}" in
     break
     ;;
     *)
-    echo -e "[${red}Error${plain}] 你妈逼啊,请输入正确数字 [1-4]"
+    echo -e "[${red}Error${plain}] 请输入正确数字 [1-4]"
     ;;
 esac
 done
