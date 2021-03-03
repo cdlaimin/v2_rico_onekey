@@ -20,6 +20,11 @@ lsmod | grep bbr
 ## Install
 ```
 //关闭防火墙
+停止firewall
+systemctl stop firewalld.service
+
+禁止firewall开机启动
+systemctl disable firewalld.service 
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 //同步系统为北京时间
